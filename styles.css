@@ -153,7 +153,7 @@ nav a:hover {
     top: 0;
     left: 0;
     z-index: 1; /* Position the image behind the overlay */
-    
+    aspect-ratio: 16/9;
 }
 
 .overlay {
@@ -210,8 +210,8 @@ nav a:hover {
 }
 
 .hero-content button:first-of-type:hover {
-    background-color: var(--secondary-color);
-    color: var(--text-dark);
+    background-color: var(--primary-color);
+    color: var(--text-light);
     border: 1px solid var(--border-dark);
 }
 
