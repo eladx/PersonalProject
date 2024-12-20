@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dale Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <ul class="sidebar">
+            <li class="close-button" onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFE3D8"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">Programs</a></li>
+            <li><a href="#">Challenges</a></li>
+            <li><a href="#">Support Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <ul>
+            <li id="links"><a href="#">Elad</a></li>
+            <li id="links" class="hideOnMobile"><a href="#">Tutorials</a></li>
+            <li id="links" class="hideOnMobile"><a href="#">Challenges</a></li>
+            <li id="links" class="hideOnMobile"><a href="#">Programs</a></li>
+            <li id="links" class="hideOnMobile"><a href="#">Support Us</a></li>
+            <li id="links" class="hideOnMobile"><a href="#">Contact</a></li>
+            <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F5F5F5"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="section">
+            <div class="overlay"></div>
+            <div class="hero-content">
+                <h1><span class="highlight">UNLEASH</span> YOUR STRENGTH</h1>
+                <p>Transform your body and mind through Calisthenics</p>
+                <button>Explore</button>
+                <button>Get Started</button>
+            </div>
+            <img src="Assets/Images/herobg.jpg" alt="herobg">
+        </section>
+        <section class="section">
+            <div>
+                <h2>what seems impossible today will soon <span class="next-line">become your warm-up</span></h2>
+            </div>
+        </section>
+        <section class="section">
+            <div class="left-side">
+                <img src="Assets/Images/dale-removebg-preview.png" alt="dalepic">
+                <div class="personal-info">
+                    <div class="header">
+                        <h3>ABOUT ME</h3>
+                        <h2>DALE ESTEBAN</h2>
+                    </div>
+                    <p>I started my calisthenics journey in March 2022, driven by a passion for strength, endurance, and body control. What began as a curiosity has evolved into a lifestyle, teaching me discipline, patience, and resilience. Through dedication, I’ve progressed from basic moves to advanced skills like muscle-ups and planches. My goal is to inspire others to embrace calisthenics and unlock their true potential.</p>
+                    <button>Read more</button>
+                </div>
+            </div>     
+        </section>
+        <section class="section">
+            <h2>Why Calisthenics?</h2>
+            <div class="calis-container">
+            <div class="card">
+                <p><strong>Full Body Workout</strong></p>
+                <p>Calisthenics uses your body weight to strengthen every muscle group. It targets your core, upper body, and lower body, giving you a full-body workout with just a few movements.</p>
+            </div>
+            <div class="card">
+                <p><strong>Improved Flexibility</strong></p>
+                <p>Incorporating calisthenics into your routine can increase your flexibility and range of motion, preventing injuries and improving overall body control.</p>
+            </div>
+            <div class="card">
+                <p><strong>Anywhere, Anytime</strong></p>
+                <p>With minimal equipment, calisthenics can be done anywhere – at home, in the park, or even while traveling. You don’t need a gym membership to get a great workout.</p>
+            </div>
+            <div class="card">
+                <p><strong>Progressive Overload</strong></p>
+                <p>By gradually increasing the difficulty of exercises through variations, you can continue making progress and build strength without needing weights or machines.</p>
+            </div>
+            <div class="card">
+                <p><strong>Functional Strength</strong></p>
+                <p>Calisthenics focuses on natural movements that improve strength and coordination for real-world tasks, helping with posture, balance, and mobility.</p>
+            </div>
+            <div class="card">
+                <p><strong>Increased Endurance</strong></p>
+                <p>Regular calisthenics workouts build stamina and endurance, which translates to better performance in other fitness activities, sports, and everyday tasks.</p>
+            </div>
+            <div class="card">
+                <p><strong>Mental Toughness</strong></p>
+                <p>As you challenge yourself with more complex movements, calisthenics not only strengthens your body but also your mind, fostering discipline, patience, and perseverance.</p>
+            </div>
+            <div class="card">
+                <p><strong>Build a Strong Foundation</strong></p>
+                <p>Calisthenics is perfect for beginners, allowing you to build a solid foundation in fitness. Mastering the basics makes advanced movements easier and safer to perform over time.</p>
+            </div>
+        </div>
+        </section>
+        <section class="section">
+            <div class="feedback-container">
+                <h2>Feedback Form</h2>
+                <p>We would love to hear your feedback, any suggestions and recommendations for improvements of our website thankyou!</p>
+                <form class="form" action="">
+                    <div class="inputs">
+                        <input type="text" name="first-name" placeholder="First Name" required>
+                        <input type="text" name="last-name" placeholder="Last Name" required>
+                    </div>
+                    <div class="inputs">
+                        <input type="email" name="" id="" placeholder="Email" required>
+                        <input type="number" name="age" placeholder="Age" required>
+                        <select name="gender" id="gender" required>
+                            <option value="" hidden selected >Sex</option>            
+                            <option value="1">Male</option>
+                            <option value="2">Female</option>
+                            <option value="2">Prefer not to say</option>
+                        </select>
+                    </div>
+                    <textarea name="comment" id="comment" cols="45" rows="5" placeholder="Enter your comment here" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>        
+    </main>
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+            document.addEventListener('click', outsideClickListener);
+        }
+
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+            document.removeEventListener('click', outsideClickListener);
+        }
+
+    
+        function outsideClickListener(event) {
+            const sidebar = document.querySelector('.sidebar');
+            const menuButton = document.querySelector('.menu-button');
+            
+            // Check if the click is outside the sidebar and the menu button
+            if (!sidebar.contains(event.target) && !menuButton.contains(event.target)) {
+                hideSidebar();
+            }
+        }
+
+
+        // function for menu and close button not go to the top of the page when clicked
+        document.querySelector('.menu-button').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+        });
+
+        document.querySelector('.close-button').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+        });
+        
+
+        
+    </script> 
+</body>
+</html>

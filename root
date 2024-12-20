@@ -1,0 +1,24 @@
+:root {
+    /* Primary Colors */
+    --primary-color: #B4182D; /* Buttons, CTAs, and Highlights */
+    --secondary-color: #FDA481; /* Hover states and accents */
+  
+    /* Background Colors */
+    --primary-bg: #181A2F; /* Main background */
+    --secondary-bg: #242E49; /* Section or secondary background */
+    --tertiary-bg: #37415C; /* Cards or containers */
+  
+    /* Borders */
+    --border-dark: #54162B; /* Subtle dark border */
+    --border-light: #FDA481; /* Light border for hover */
+  
+    /* Text Colors */ 
+    --text-light: #F5F5F5; /* Light text for dark backgrounds */
+    --text-dark: #121212; /* Dark text for light backgrounds */
+    --text-muted: #909293; /* Muted text for subtitles or descriptions */
+    --text-accent: #FDA481; /* Accent text for highlights or links */
+  
+    /* Accent Color */
+    --accent-color: #54162B; /* Borders, separators, and small icons */
+  }
+  
