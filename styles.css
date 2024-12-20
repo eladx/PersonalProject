@@ -169,10 +169,6 @@ nav a:hover {
     width: 100%;
     height: fit-content;
     z-index: 2; /* Position the overlay above the image */
-    border-image: fill 1 
-        linear-gradient(
-        hsl(240 100% 20% / .6), 
-        hsl(0 100% 20%))
 }
 
 .hero-content {
