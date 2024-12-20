@@ -37,14 +37,6 @@ body, html {
     scroll-behavior: smooth;
 }
 
-body {
-    transition: filter 0.3s ease; /* Smooth transition for body brightness */
-}
-
-.body-dimmed {
-    filter: brightness(50%);
-}
-
 li,
 p {
     overflow-wrap: break-word; /* Ensures long words break properly */

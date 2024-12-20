@@ -123,20 +123,15 @@
         </section>        
     </main>
     <script>
-        const body = document.body;
         const sidebar = document.querySelector('.sidebar');
 
         function showSidebar() {
             sidebar.style.display = 'flex';  // Show the sidebar
-            body.classList.add('body-dimmed');  // Dim the body
-            sidebar.classList.add('clicked');  // Optional, to style the sidebar when clicked
             document.addEventListener('click', outsideClickListener);  // Listen for clicks outside to close the sidebar
         }
 
         function hideSidebar() {
             sidebar.style.display = 'none';  // Hide the sidebar
-            body.classList.remove('body-dimmed');  // Remove the dimming effect
-            sidebar.classList.remove('clicked');  // Remove the clicked class
             document.removeEventListener('click', outsideClickListener);  // Remove the outside click listener
         }
 
