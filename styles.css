@@ -175,28 +175,34 @@ nav a:hover {
     position: relative;
     z-index: 3; /* Place the text above the overlay */
     color: var(--text-light); /* Use your text color variable */
-    padding: 0 20px; /* Add some padding for smaller screens */
+    padding: 0 2%; /* Add some padding for smaller screens */
     text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 1.8rem;
+    font-size: clamp(1.8rem, 1.2210526315789474rem + 2.3157894736842106vw, 4rem);
+    margin-bottom: 1rem;
+    position: relative;
     opacity: 0;  /* Initially hidden */
-    left: -100%;  /* Position the text off the left side of the screen */
-    animation: slideIn 1.5s forwards; 
+    top: -100%;  /* Position the text off the screen */
+    animation: slideIn 1.5s forwards;
 }
 
 @keyframes slideIn {
     0% {
-        left: -100%;  /* Start off-screen */
-        opacity: 0;   /* Initially hidden */
+        top: -100%;    /* Start off-screen */
+        opacity: 0;    /* Initially hidden */
+        font-size: 0.9rem;
+        font-size: clamp(0.9rem, 0.6105263157894737rem + 1.1578947368421053vw, 2rem); /* Smaller font size at the start */
     }
     100% {
-        left: 0;      /* Slide to its original position */
-        opacity: 1;   /* Fully visible */
+        top: 0;        /* Slide to its original position */
+        opacity: 1;    /* Fully visible */
+        font-size: clamp(1.8rem, 1.2210526315789474rem + 2.3157894736842106vw, 4rem); /* Original font size */
     }
 }
 
-.hero-content h1 {
-    font-size: clamp(2rem, 4vw, 4rem);
-    margin-bottom: 1rem;
-}
 
 .hero-content .highlight {
     color: var(--text-accent);
@@ -207,6 +213,21 @@ nav a:hover {
 .hero-content p {
     font-size: clamp(1rem, 2vw, 1.5rem);
     margin-bottom: 2rem;
+    position: relative;
+    opacity: 0;  /* Initially hidden */
+    left: -100%;  /* Position the text off the left side of the screen */
+    animation: slideLeftIn 2.5s forwards;
+}
+
+@keyframes slideLeftIn {
+    0% {
+        left: -100%;  /* Start off-screen */
+        opacity: 0;   /* Initially hidden */
+    }
+    100% {
+        left: 0;      /* Slide to its original position */
+        opacity: 1;   /* Fully visible */
+    }
 }
 
 .hero-content button {
@@ -222,6 +243,21 @@ nav a:hover {
     cursor: pointer;
     font-size: 1rem;
     font-weight: 600;
+    position: relative;
+    opacity: 0;  /* Initially hidden */
+    right: -100%;  /* Position the text off the left side of the screen */
+    animation: slideRightIn 2s forwards;
+}
+
+@keyframes slideRightIn {
+    0% {
+        right: -100%;  /* Start off-screen */
+        opacity: 0;   /* Initially hidden */
+    }
+    100% {
+        right: 0;      /* Slide to its original position */
+        opacity: 1;   /* Fully visible */
+    }
 }
 
 .hero-content button:first-of-type:hover {
@@ -657,17 +693,32 @@ nav a:hover {
         display: none;
     }
 
-    .feedback-container {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 520px) {
     .section:nth-child(5) {
         padding: 0;
     }
 
+    .feedback-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .feedback-container .form1,
+    .feedback-container .form2 {
+        padding: 2rem;
+        width: 100%;
+        border: none;
+    }
+
+    .feedback-container .form2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        place-items: center;
+    }
+}
+
+@media (max-width: 520px) {
     .feedback-container {
         width: 100%;
         padding: 0;
