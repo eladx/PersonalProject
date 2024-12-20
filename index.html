@@ -99,9 +99,9 @@
         </section>
         <section class="section">
             <div class="feedback-container">
-                <h2>Feedback Form</h2>
-                <p>We would love to hear your feedback, any suggestions and recommendations for improvements of our website thankyou!</p>
-                <form class="form" action="">
+                <form class="form1" action="">
+                    <h3>Feedback Form</h3>
+                    <p>We would love to hear your feedback, any suggestions and recommendations for improvements of our website thankyou!</p>
                     <div class="inputs">
                         <input type="text" name="first-name" placeholder="First Name" required>
                         <input type="text" name="last-name" placeholder="Last Name" required>
@@ -119,10 +119,27 @@
                     <textarea name="comment" id="comment" cols="45" rows="5" placeholder="Enter your comment here" required></textarea>
                     <button type="submit">Submit</button>
                 </form>
-            </div>
+                <form class="form2" action="">
+                    <h3>Sign up for the news letter</h3>
+                    <p>Want to be the first to read our news? Subscribe to the newsletter to keep abreast of all events.</p>
+                    <div class="inputs-form2">
+                        <input type="email" name ="email" placeholder="Enter a valid email address" required>
+                        <button>Submit</button>
+                    </div>
+                </form>
+                </div>
         </section>        
     </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; <span id="current-year"></span> EladFit. All rights reserved.</p>
+        </div>
+    </footer>
     <script>
+
+        // Get the current year dynamically
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
         const sidebar = document.querySelector('.sidebar');
 
         function showSidebar() {
