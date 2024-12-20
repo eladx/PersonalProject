@@ -441,6 +441,7 @@ nav a:hover {
 .feedback-container .form2 {
     width: 100%;
     padding: 1.5rem;
+    height: 100%;
     border: 1px solid var(--border-light);
     color: var(--text-light);
     background-color: var(--tertiary-bg);
@@ -575,13 +576,14 @@ nav a:hover {
 
     .feedback-container {
         width: 80%;
+        
     }
 }
 
 @media (max-width: 1000px) {
     .feedback-container {
-        width: 50%;
-        grid-template-columns: 1fr;
+        width: 90%;
+        
     }
 }
 
@@ -597,7 +599,7 @@ nav a:hover {
     }
 
     .feedback-container {
-        width: 70%;
+        width: 100%;
     }
 }
 
@@ -654,6 +656,27 @@ nav a:hover {
     .left-side img {
         display: none;
     }
+
+    .feedback-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 520px) {
+    .section:nth-child(5) {
+        padding: 0;
+    }
+
+    .feedback-container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .feedback-container > .form1,
+    .feedback-container > .form2 {
+        border: none;
+    }
 }
 
 @media(max-width: 400px) {
@@ -684,19 +707,11 @@ nav a:hover {
 
     .feedback-container {
         width: 100%; /* Almost full-width for small screens */
-        padding: 0;
     }
 
-    .feedback-container .form1 {
-        display: flex;
-        padding: 0;
-        width: 100%;
-        border: none;
-    }
-
+    .feedback-container .form1,
     .feedback-container .form2 {
-        background-color: transparent;
-        padding: 0;
+        padding: 1rem;
         width: 100%;
         border: none;
     }
