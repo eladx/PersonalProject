@@ -37,6 +37,14 @@ body, html {
     scroll-behavior: smooth;
 }
 
+body {
+    transition: filter 0.3s ease; /* Smooth transition for body brightness */
+}
+
+.body-dimmed {
+    filter: brightness(50%);
+}
+
 li,
 p {
     overflow-wrap: break-word; /* Ensures long words break properly */
@@ -105,6 +113,12 @@ nav a:hover {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    transition: right 0.3s ease;
+    
+}
+
+.sidebar.clicked {
+    filter: brightness(100%);
 }
 
 .sidebar li {
@@ -175,7 +189,20 @@ nav a:hover {
     color: var(--text-light); /* Use your text color variable */
     padding: 0 20px; /* Add some padding for smaller screens */
     text-align: center;
-    
+    opacity: 0;  /* Initially hidden */
+    left: -100%;  /* Position the text off the left side of the screen */
+    animation: slideIn 1.5s forwards; 
+}
+
+@keyframes slideIn {
+    0% {
+        left: -100%;  /* Start off-screen */
+        opacity: 0;   /* Initially hidden */
+    }
+    100% {
+        left: 0;      /* Slide to its original position */
+        opacity: 1;   /* Fully visible */
+    }
 }
 
 .hero-content h1 {
@@ -541,11 +568,13 @@ nav a:hover {
     .section:first-child {
         height: 90svh;
     }
+
     .section:nth-child(2) {
         height: 10svh;
     }
     .sidebar {
         width: 50%;
+        height: 100%;
     }
     
     .left-side img {
