@@ -111,23 +111,16 @@
                     </div>
                     <div class="inputs">
                         <input type="email" name="" id="" placeholder="Email" required>
-                        <input type="number" name="age" placeholder="Age" required>
-                        <select name="gender" id="gender" required>
-                            <option value="" hidden selected >Sex</option>            
-                            <option value="1">Male</option>
-                            <option value="2">Female</option>
-                            <option value="2">Prefer not to say</option>
-                        </select>
                     </div>
                     <textarea name="comment" id="comment" cols="45" rows="5" placeholder="Enter your comment here" required></textarea>
                     <button type="submit">Submit</button>
                 </form>
                 <form class="form2" action="">
-                    <h3>Sign up for the news letter</h3>
-                    <p>Want to be the first to read our news? Subscribe to the newsletter to keep abreast of all events.</p>
+                    <h3>Stay Ahead in Your Fitness Journey</h3>
+                    <p>Want exclusive fitness tips, tutorials, and exciting challenges? Subscribe to our newsletter and achieve your goals faster!</p>
                     <div class="inputs-form2">
-                        <input type="email" name ="email" placeholder="Enter a valid email address" required>
-                        <button>Submit</button>
+                        <input type="email" name="email" placeholder="Enter your email to join us" required>
+                        <button>Subscribe</button>
                     </div>
                 </form>
                 </div>
@@ -144,9 +137,12 @@
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
         const sidebar = document.querySelector('.sidebar');
+        const body = document.querySelector('body');
 
         function showSidebar() {
             sidebar.style.display = 'flex';  // Show the sidebar
+            body.classList.add('overlay');
+            sidebar.classList.add('show');
             document.addEventListener('click', outsideClickListener);  // Listen for clicks outside to close the sidebar
         }
 
