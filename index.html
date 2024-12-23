@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="navbar.css">
     <title>EladFit</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <script type="module" src="navbar.js"></script>
 </head>
 <body class="body">
     <nav id="navbar">
@@ -18,15 +20,15 @@
             <li><a href="#">Programs</a></li>
             <li><a href="#">Challenges</a></li>
             <li><a href="#">Support Us</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
         <ul>
-            <li id="links"><a href="#">Elad</a></li>
+            <li id="links"><a href="index.html">EladFit</a></li>
             <li id="links" class="hideOnMobile"><a href="#">Tutorials</a></li>
             <li id="links" class="hideOnMobile"><a href="#">Challenges</a></li>
             <li id="links" class="hideOnMobile"><a href="#">Programs</a></li>
             <li id="links" class="hideOnMobile"><a href="#">Support Us</a></li>
-            <li id="links" class="hideOnMobile"><a href="#">Contact</a></li>
+            <li id="links" class="hideOnMobile"><a href="contact.html">Contact</a></li>
             <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F5F5F5"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
         </ul>
     </nav>
@@ -130,47 +132,10 @@
         <div class="footer-container">
             <p>&copy; <span id="current-year"></span> EladFit. All rights reserved.</p>
         </div>
-    </footer>
+    </footer>   
     <script>
-
         // Get the current year dynamically
         document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        const sidebar = document.querySelector('.sidebar');
-        const body = document.querySelector('body');
-
-        function showSidebar() {
-            sidebar.style.display = 'flex';  // Show the sidebar
-            body.classList.add('overlay');
-            sidebar.classList.add('show');
-            document.addEventListener('click', outsideClickListener);  // Listen for clicks outside to close the sidebar
-        }
-
-        function hideSidebar() {
-            sidebar.style.display = 'none';  // Hide the sidebar
-            document.removeEventListener('click', outsideClickListener);  // Remove the outside click listener
-        }
-
-        function outsideClickListener(event) {
-            const menuButton = document.querySelector('.menu-button');
-            // Check if the click is outside the sidebar and the menu button
-            if (!sidebar.contains(event.target) && !menuButton.contains(event.target)) {
-                hideSidebar();
-            }
-        }
-
-        // Prevent the default behavior when clicking on the menu or close button
-        document.querySelector('.menu-button').addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default link behavior
-        });
-
-        document.querySelector('.close-button').addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default link behavior
-        });
-
-        
-
-        
-    </script> 
+    </script>
 </body>
 </html>

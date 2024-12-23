@@ -20,9 +20,8 @@
   
     /* Accent Color */
     --accent-color: #54162B; /* Borders, separators, and small icons */
-  }
+}
   
-
 *,
 *::before,
 *::after {
@@ -239,6 +238,7 @@ nav a:hover {
     opacity: 0;  /* Initially hidden */
     right: -100%;  /* Position the text off the left side of the screen */
     animation: slideRightIn 2s forwards;
+    transition: 0.3s ease;
 }
 
 @keyframes slideRightIn {
@@ -256,6 +256,7 @@ nav a:hover {
     background-color: var(--secondary-color);
     color: var(--text-dark);
     border: 1px solid var(--border-dark);
+    
 }
 
 
@@ -263,6 +264,7 @@ nav a:hover {
     background-color: transparent;
     color: var(--light-text-color);
     border: 1px solid var(--border-light);
+    transition: 0.3s ease;
 }
 
 
@@ -357,12 +359,14 @@ nav a:hover {
     padding: clamp(.5rem, 1vw, 1rem);
     outline: none;
     border: 1px solid var(--border-light);
+    transition: 0.3s ease;
 }
 
 .left-side button:hover {
-    background-color: transparent;
-    color: var(--light-text-color);
-    border: 1px solid var(--border-light);
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+    border: 1px solid var(--border-dark);
+    
 }
 
 .section:nth-child(4) {
@@ -440,30 +444,6 @@ nav a:hover {
     text-align: center;
 }
 
-/* General Form Styling */
-.inputs input,
-.inputs select,
-.feedback-container .form1 textarea {
-    width: 100%;
-    padding: 0.75rem;
-    box-sizing: border-box;
-    font-size: 1rem;
-    border: 1px solid var(--border-light);
-    border-radius: 5px;
-    background-color: var(--tertiary-bg);
-    color: var(--text-light);
-}
-
-.feedback-container .form1 button {
-    padding: 0.75rem;
-    border: 1px solid var(--border-light);
-    border-radius: 5px;
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
 .feedback-container .form1 {
     border: 1px solid var(--border-light);
     box-sizing: border-box;
@@ -471,21 +451,6 @@ nav a:hover {
     flex-direction: column;
     gap: 1.5rem;
     padding: 1.5rem;
-}
-
-.feedback-container .form2 {
-    width: 100%;
-    padding: 1.5rem;
-    height: 100%;
-    border: 1px solid var(--border-light);
-    color: var(--text-light);
-    background-color: var(--tertiary-bg);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-    padding: 2rem;
 }
 
 .feedback-container .form1 h3 {
@@ -506,6 +471,51 @@ nav a:hover {
     text-transform: uppercase;
     color: var(--text-accent);
 }
+
+.inputs input,
+.inputs select,
+.feedback-container .form1 textarea {
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+    border: 1px solid var(--border-light);
+    border-radius: 5px;
+    background-color: var(--tertiary-bg);
+    color: var(--text-light);
+}
+
+.feedback-container .form1 button {
+    padding: 0.75rem;
+    border: 1px solid var(--border-light);
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+.feedback-container .form1 button:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+}
+
+
+.feedback-container .form2 {
+    width: 100%;
+    padding: 1.5rem;
+    height: 100%;
+    border: 1px solid var(--border-light);
+    color: var(--text-light);
+    background-color: var(--tertiary-bg);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+
 
 .feedback-container .form2 p {
     font-size: 0.875rem;
@@ -540,6 +550,11 @@ nav a:hover {
     border: 1px solid var(--border-light);
     border-radius: 5px;
     cursor: pointer;
+}
+
+.inputs-form2 button:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
 }
 
 
