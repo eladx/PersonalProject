@@ -12,6 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
     <script type="module" src="../javascript/navbar.js"></script>
     <style>
+        *{
+            box-sizing: border-box;
+        }
+
         body {
             min-height: 100%;
         }
@@ -20,7 +24,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 2rem;
         }
 
         .contact-container {
@@ -31,33 +34,42 @@
             text-align: center;
             background: linear-gradient(45deg,#242E49, #B4182D);
             gap: 3rem;
-            padding: 2rem;
             width: 100%;
         }
 
         .contact-grid {
-            display: flex;
-            align-items: stretch;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 3rem;
-            flex-wrap: wrap;
-            width: 70%;
-        }
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-top: 3rem;
+        width: 70%;
+    }
 
-        .contact-grid > * {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-            flex: 1;
-            background-color: #37415C;
-            border-radius: 10px;
-            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-            gap: 0.5rem;      
-            
+    .contact-grid > * {
+        display: grid;
+        align-items: center;
+        gap: 1rem;
+        justify-content: center;
+        padding: 1rem .7rem;
+        background-color: #37415C;
+        border-radius: 10px;
+        box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    }
+
+    
+
+    @media (max-width: 1024px) {
+        .contact-grid {
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr);
         }
+    }
+
+    @media (max-width: 768px) {
+        .contact-grid {
+            grid-template-columns: 1fr;
+        }
+    }
 
         .contact-grid img{
             width: 50px;
@@ -69,11 +81,46 @@
             padding: 2rem;
         }
 
-        @media (max-width: 700px) {
+        @media (max-width: 400px) {
             .contact-grid {
-                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr; /* Single-column layout */
             }
+
+            .contact-grid > *{
+                display: flex;
+                max-width: 100%;
+            }
+            
+            .contact-grid img {
+                max-width: 100%; /* Prevent overflow */
+                height: auto; /* Maintain aspect ratio */
+            }
+
+            .contact-grid p {
+                word-wrap: break-word;
+            }
+
+            .left-side {
+                width: 30%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center
+            }
+
+            .right-side {
+                width: 70%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }         
         }
+
+        
     </style>
 </head>
 <body class="body">
@@ -107,30 +154,32 @@
             <div class="contact-container">
                 <div class="contact-grid">
                     <div class="item">
-                        <div>
+                        <div class="left-side">
                             <img src="../Assets/Icons/gps.png">
                             <h2>Address</h2>
                         </div>
-                        <p>2812 Bicoleyte Commonwealth Quezon City</p>
+                        <div class="right-side">
+                            <p>1234 halimbawa California Quezon City</p>
+                        </div>
                     </div>
                     <div class="item">
-                        <div>
+                        <div class="left-side">
                             <img src="../Assets/Icons/email.png">
                             <h2>Email</h2>
                         </div>
-                        <div>
-                            <p>christdalecruz@gmail.com</p>
-                            <p>christdaleesteban2201@gmail.com</p>
+                        <div class="right-side">
+                            <p>sampleemail@gmail.com</p>
+                            <p>sampleemailagain@gmail.com</p>
                         </div>
                     </div>
                     <div class="item">
-                        <div>
+                        <div class="left-side">
                             <img src="../Assets/Icons/phone-call.png">
                             <h2>Call Now</h2>
                         </div>
-                        <div>
-                            <p>+63 9763660509</p>
-                            <p>+63 9686893015</p>
+                        <div class="right-side">
+                            <p>+63 1234567891</p>
+                            <p>+63 1234567891</p>
                         </div>
                     </div>
                 </div>
